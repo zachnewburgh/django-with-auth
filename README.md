@@ -24,6 +24,13 @@ Install the dependencies.
 pip install -r requirements.txt
 ```
 
+Add your SECRET_KEY and DEBUG values to an .env file where you will store your environment variables.
+
+```bash
+python -c 'from django.core.management.utils import get_random_secret_key; print(f"SECRET_KEY={get_random_secret_key()}")' >> .env
+echo "DEBUG=True" >> .env
+```
+
 Run your migrations.
 
 ```bash
